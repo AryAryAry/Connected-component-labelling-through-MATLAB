@@ -2,8 +2,8 @@
 This is a MATLAB function that utilises the image processing toolbox to convert any image to its edge image using Canny algorithm and then label connected components in it. The whole labelling algorithm is in a function that you can apply to any image. The edge image goes through the labelling algorithm and final image is displayed. This project is a good aid at understanding the connected-component labelling algorithm using MATLAB's matrix and image operations. The comments explain every line in the code. You are encouraged to optimise the code and make it shorter, i'm not much of a pro :)
 
 Data:
-- objects.m %the function you can call with any image as input
-- Sample image - shapes.png that you can use in the function
+- objects.m (the function you can call with any image as input)
+- Sample image : shapes.png that you can use in the function for simple understanding
 
 The algorithm:
 - The obtained edge image is a binary image, and is converted to uint8(or uint16) grayscale image so that we can label seperate pixels
