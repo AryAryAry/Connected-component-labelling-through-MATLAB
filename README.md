@@ -11,11 +11,11 @@ The algorithm:
 - The anchor is moved through the image and the code checks if the pixel is of the set initial value
 - Labelling starts there. The first pixel of blob is put in a source matrix.
 - Source matrix structure:
-	''''HTML
-	|source_element1_row		source_element1_column|
-	|source_element2_row		source_element2_column|
+	'''
+	|source_element1_row	source_element1_column|
+	|source_element2_row	source_element2_column|
 	...............................................
-	''''HTML
+	'''
 - Now the code enters a loop that labels all connected pixels with a different value
 - The 8 pixels around the source element are checked. The indices of the elements relative to image matrix are stored in a 'destination matrix' that has the same structure as the source matrix.
 - Code moves to the next source element and does the same till all source elements' surroundings have been checked
@@ -23,4 +23,4 @@ The algorithm:
 (While checking initil label, if  the source elements have no surrounding pixels with initial value, code moves to the next source element. If no further source elements are present, the source is cleared and then roles of source and destination matrices are exchanged)
 - This goes on till the destination matrix turns out to be empty after all checking surroundings of all source elements, which means that the whole blob/object has been labelled. The value of new label is the incremented, source-destination matrices cleared and the anchor moves on to find another blob
 - This goes on till the anchor reaches the last, bottom-right pixel of the image
-- The output image is teh labelled one
+- The output image is the labelled one
