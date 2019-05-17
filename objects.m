@@ -1,7 +1,7 @@
 function out = objects(a)
     %% Initialize image matrix and other variables
-    a = rgb2gray(a); %convert to a BW image for cannny operator input
-    out = uint8(30*edge(a,'canny')); %change 30 to any initial value you want
+    a = rgb2gray(imread(a)); %convert to a BW image for cannny operator input
+    out = uint8(30*edge(out,'canny')); %change 30 to any initial value you want
     anch = [1 1]; %anchor that moves whenever an object is completely labelled
     R = size(out,1);
     C = size(out,2);
